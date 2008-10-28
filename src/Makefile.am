@@ -1,22 +1,22 @@
 datarootdir = @datarootdir@
 
-INCLUDES = $(QTASSM_CFLAGS)
+INCLUDES = $(GTASSM_CFLAGS)
 
 AM_CFLAGS = \
         -Wimplicit -Wall \
         -DREGION=1
 
-bin_PROGRAMS = qtassm
+bin_PROGRAMS = gtassm
 
 DEFS = @DEFS@ \
        -DPREFIX=\"@PREFIX@\"  \
        -DSRCFILEDIR=\"`pwd`\" \
        @GLOBAL_DEFINES@
 
-qtassm_SOURCES = main.c
+gtassm_SOURCES = main.c
 
 SRCFILEDIR=`pwd`
 
-qtassm_LDFLAGS=$(QTASSM_LIBS)
+gtassm_LDFLAGS=$(GTASSM_LIBS)
 
-qtassm_LDADD = 
+gtassm_LDADD = 
